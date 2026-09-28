@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+section{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+    align-items: center;
+}
+div{
+    align-items: center;
+    justify-content: center;
+}
+label {
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
