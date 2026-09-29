@@ -12,6 +12,7 @@
     </header>
     <main>
         <?php
+            $id = uniqid();
             $nome = $_POST['nome'] ?? '';
             $idade = $_POST['idade'] ?? '';
             $turma = $_POST['turma'] ?? '';
@@ -19,7 +20,23 @@
             $nota2 = $_POST['nota2'] ?? '';
             $nota3 = $_POST['nota3'] ?? '';
             $nota4 = $_POST['nota4'] ?? '';
-            echo "<p>Nome: $nome</p><p>Idade: $idade</p><p>Turma: $turma</p><p>Nota 1: $nota1</p><p>Nota 2: $nota2</p><p>Nota 3: $nota3</p><p>Nota 4: $nota4</p>"; 
+            $media = $_POST['media'] ?? '';
+            
+            if (!empty($nome) && !empty($idade) && !empty($turma) && !empty($nota1) && !empty($nota2) && !empty($nota3) && !empty($nota4)) {
+                include 'config/conect.php';
+
+                $sql = "INSERT INTO alunos (ID, nome, idade, turma, nota1, nota2, nota3, nota4, media) VALUES ('$nome', '$idade', '$turma', '$nota1', '$nota2', '$nota3', '$nota4', '$media')";
+
+                if ($conn->query($sql) === TRUE) {
+                    echo "<p>Registro inserido com sucesso!</p>";
+                } else {
+                    echo "<p>Erro ao inserir registro: " . $conn->error . "</p>";
+                }
+
+                $conn->close();
+            } else {
+                echo "<p>Por favor, preencha todos os campos.</p>";
+            }
         ?>
 
     </main>

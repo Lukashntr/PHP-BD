@@ -1,39 +1,72 @@
 body{
-    margin: 0;
+    margin: 50px;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: monospace;
     background-color: #f4f6f9;
     align-items: center;
     justify-content: center;
+    
 }
-header{
+#intro{
     text-align: center;
-    margin-bottom: 20px;
+    background-color: #007bff;
+    color: #fff;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
+
 section{
     background-color: #fff;
-    padding: 20px;
+    padding: 40px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
-form {
-    padding: 20px;
+form{
+    width: 200%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 200px;
-    align-items: center;
-}
-div{
     align-items: center;
     justify-content: center;
 }
-label {
-    font-weight: bold;
+.form-group{
+    display: flex;
+    margin:5px;
+    padding: 20px;
+    display: flex;
+    width: 120%;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.form-item-nota{
+    text-align: center;
+    
+}
+label{
+    width: 100px;
+    text-align: center;
+}
+input{
+    padding: 8px;
+    border: 2px solid gray;
     border-radius: 4px;
-    padding: 5px;
-    border: 1px solid #ccc;
+    width: 80%;
+}
+.form-button button{
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
 }
