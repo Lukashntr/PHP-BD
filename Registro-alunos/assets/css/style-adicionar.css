@@ -1,0 +1,148 @@
+/* Base visual das telas de cadastro */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --azul: #2563eb;
+  --azul-escuro: #1d4ed8;
+  --azul-claro: #eff6ff;
+  --texto: #1e293b;
+  --texto-suave: #64748b;
+  --borda: #cbd5e1;
+  --fundo: #f1f5f9;
+  --branco: #ffffff;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+#intro {
+  text-align: center;
+  background: linear-gradient(135deg, var(--azul), #3b82f6);
+  color: var(--branco);
+  padding: 32px 20px;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.18);
+}
+
+#intro h1 {
+  margin-bottom: 6px;
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+}
+
+#intro h3 {
+  font-weight: normal;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.form {
+  width: min(100% - 32px, 760px);
+  margin: 28px auto;
+  padding: clamp(20px, 4vw, 32px);
+  background: var(--branco);
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.form-item {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item label {
+  margin-bottom: 7px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--texto);
+}
+
+.form-item input {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 12px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: #f8fafc;
+  color: var(--texto);
+  font: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.nota {
+  width: 200px;
+}
+
+.form-item input:focus {
+  border-color: var(--azul);
+  background: var(--branco);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+  outline: none;
+}
+
+.media {
+  display: inline-block;
+  min-height: 42px;
+  padding: 9px 12px;
+  background: var(--azul-claro);
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  font-weight: bold;
+  color: var(--azul-escuro);
+}
+
+.btn {
+  min-height: 42px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: var(--azul);
+  color: var(--branco);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  background: var(--azul-escuro);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+#voltar{
+  text-decoration: none;
+  color: var(--branco);
+}
+
+@media (max-width: 520px) {
+  .form-item,
+  .nota {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .form-group {
+    gap: 14px;
+  }
+}
